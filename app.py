@@ -1,9 +1,11 @@
 from flask import Flask, render_template
 from config.bd import app
 from flask_cors import CORS
-@app.route("/", methods=['GET'])
-def index():
-    return render_template('index.html')
+from api.render import ruta_render
+
+app.register_blueprint(ruta_render, url_prefix="/")
+
+
 
 #Enable CORS for the entire application
 CORS(app)
