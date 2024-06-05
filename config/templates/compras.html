@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="compras-styles.css">
+    <link rel="stylesheet" href="static/css/compras-styles.css">
     <title>Compras</title>
 </head>
 
@@ -14,14 +14,14 @@
         <h1>Módulo de Compras</h1>
         <nav>
             <ul>
-                <li><a href="perfil.html">Perfil</a></li>
-                <li><a href="parametrizacion.html">Parametrización</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="clientes.html">Clientes</a></li>
-                <li><a href="cotizacion.html">Cotización</a></li>
-                <li><a href="compras.html">Compras</a></li>
-                <li><a href="stock.html">Stock</a></li>
-                <li><a href="informes.html">Informes</a></li>
+                <li><a href="templates/perfil.html">Perfil</a></li>
+                <li><a href="templates/parametrizacion.html">Parametrización</a></li>
+                <li><a href="templates/productos.html">Productos</a></li>
+                <li><a href="templates/clientes.html">Clientes</a></li>
+                <li><a href="templates/cotizacion.html">Cotización</a></li>
+                <li><a href="templates/compras.html">Compras</a></li>
+                <li><a href="templates/stock.html">Stock</a></li>
+                <li><a href="templates/informes.html">Informes</a></li>
                 <li><button onclick="cerrarSesion()">Cerrar sesión</button></li>
             </ul>
         </nav>
@@ -55,14 +55,10 @@
                 </ul>
             </section>
         </section>
-        <script>     
-            function cerrarSesion() {
-             // Lógica para cerrar sesión y redirigir al menú principal
-             alert('Sesión cerrada. Redirigiendo al menú principal...');
-             // Redirigir al menú principal (cambia la URL al menú principal)
-             window.location.href = 'index.html';  // Cambia 'index.html' por la URL de tu menú principal
-         }</script>
     </main>
+
+    <script src="static/js/compras-scripts.js"></script>
 </body>
 
 </html>
+

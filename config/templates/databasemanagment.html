@@ -4,23 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestionar Bases de Datos</title>
-  <link rel="stylesheet" href="database-management-styles.css">
+  <link rel="stylesheet" href="static/css/database-management-styles.css">
 </head>
 <body>
   <header>
     <h1>Gestionar Bases de Datos</h1>
     <nav>
       <ul>
-          <li><a href="menu_principal.html">Menú principal</a></li>
-          <li><a href="gestion_empresas.html">Gestión de Empresas</a></li>
-          <li><a href="periodo-managment.html">Gestión de Periodos</a></li>
-          <li><a href="databasemanagment.html">Gestión de Bases de Datos</a></li>
-          <li><a href="cerrar_sesion.html">Cerrar Sesión</a></li>
-          <li><button onclick="cerrarSesion()">Cerrar sesión</button></li>
+        <li><a href="menu_principal.html">Menú principal</a></li>
+        <li><a href="gestion_empresas.html">Gestión de Empresas</a></li>
+        <li><a href="periodo-managment.html">Gestión de Periodos</a></li>
+        <li><a href="databasemanagment.html">Gestión de Bases de Datos</a></li>
+        <li><button id="logout-btn">Cerrar sesión</button></li>
       </ul>
-  </nav>
-    <nav>
-      <a href="#back">Volver</a>
     </nav>
   </header>
   <main>
@@ -42,22 +38,15 @@
     <section>
       <h2>Gestionar Bases de Datos Existentes</h2>
       <!-- Lista de bases de datos existentes con opciones para administrar -->
-      <ul class="database-list">
-        <li>
-          <span>ID de la Empresa: <strong>12345</strong></span>
-          <span>Nombre de la Base de Datos: <strong>sisn_12345</strong></span>
-          <button>Eliminar</button>
-        </li>
-        <!-- Más bases de datos aquí -->
+      <ul id="database-list" class="database-list">
+        <!-- Las bases de datos se añadirán dinámicamente aquí -->
       </ul>
     </section>
-    <script>     
-      function cerrarSesion() {
-       // Lógica para cerrar sesión y redirigir al menú principal
-       alert('Sesión cerrada. Redirigiendo al menú principal...');
-       // Redirigir al menú principal (cambia la URL al menú principal)
-       window.location.href = 'index.html';  // Cambia 'index.html' por la URL de tu menú principal
-   }</script>
   </main>
+  <footer>
+    <p>&copy; 2024 Gestionar Bases de Datos</p>
+  </footer>
+  
+  <script src="static/js/database-management-scripts.js"></script>
 </body>
 </html>

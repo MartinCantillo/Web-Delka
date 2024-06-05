@@ -16,7 +16,7 @@
                 <li><a href="periodo-managment.html">Gestión de Periodos</a></li>
                 <li><a href="databasemanagment.html">Gestión de Bases de Datos</a></li>
                 <li><a href="cerrar_sesion.html">Cerrar Sesión</a></li>
-                <li><button onclick="cerrarSesion()">Cerrar sesión</button></li>
+                <li><button id="cerrar-sesion-btn">Cerrar sesión</button></li>
             </ul>
         </nav>
     </header>
@@ -46,13 +46,7 @@
             </div>
             <!-- Agrega más empresas aquí -->
         </section>
-        <script>     
-            function cerrarSesion() {
-             // Lógica para cerrar sesión y redirigir al menú principal
-             alert('Sesión cerrada. Redirigiendo al menú principal...');
-             // Redirigir al menú principal (cambia la URL al menú principal)
-             window.location.href = 'index.html';  // Cambia 'index.html' por la URL de tu menú principal
-         }</script>
     </main>
+    <script src="gestion_empresas-scripts.js"></script>
 </body>
 </html>
