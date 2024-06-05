@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="informes-styles.css">
+    <title>Informes</title>
+</head>
+
+<body>
+    <header>
+        <h1>Módulo de Informes</h1>
+        <nav>
+            <ul>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="parametrizacion.html">Parametrización</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+                <li><a href="cotizacion.html">Cotización</a></li>
+                <li><a href="compras.html">Compras</a></li>
+                <li><a href="stock.html">Stock</a></li>
+                <li><a href="informes.html">Informes</a></li>
+                <li><button onclick="cerrarSesion()">Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="informes-section">
+            <h2>Generación de Informes</h2>
+
+            <!-- Opciones para generar informes -->
+            <div class="informes-opciones">
+                <button onclick="generarInforme('ventas')">Informe de Ventas</button>
+                <button onclick="generarInforme('facturas')">Generar Factura</button>
+                <button onclick="generarInforme('clientes')">Informe de Clientes</button>
+            </div>
+
+            <!-- Área para mostrar informes generados -->
+            <div class="informes-resultado">
+                <h3>Resultado del Informe</h3>
+                <div id="resultado-informe">
+                    <!-- Los informes generados se mostrarán aquí -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function generarInforme(tipo) {
+            // Lógica para generar el informe de acuerdo al tipo seleccionado
+            // Esta función puede realizar solicitudes a un servidor para obtener los datos necesarios
+            const resultadoInforme = document.getElementById('resultado-informe');
+            resultadoInforme.innerHTML = `Generando informe de ${tipo}...`;
+
+            // Aquí se puede agregar lógica adicional para generar informes y mostrar los resultados
+        }
+        function cerrarSesion() {
+            // Lógica para cerrar sesión y redirigir al menú principal
+            alert('Sesión cerrada. Redirigiendo al menú principal...');
+            // Redirigir al menú principal (cambia la URL al menú principal)
+            window.location.href = 'index.html';  // Cambia 'index.html' por la URL de tu menú principal
+        }
+    </script>
+</body>
+
+</html>

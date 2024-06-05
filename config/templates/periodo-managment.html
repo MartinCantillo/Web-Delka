@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionar Periodos</title>
+  <link rel="stylesheet" href="period-management-styles.css">
+</head>
+<body>
+  <header>
+    <h1>Gestionar Periodos - Administrador</h1>
+    <nav>
+      <ul>
+          <li><a href="menu_principal.html">Menú principal</a></li>
+          <li><a href="gestion_empresas.html">Gestión de Empresas</a></li>
+          <li><a href="periodo-managment.html">Gestión de Periodos</a></li>
+          <li><a href="databasemanagment.html">Gestión de Bases de Datos</a></li>
+          <li><a href="cerrar_sesion.html">Cerrar Sesión</a></li>
+      </ul>
+  </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Periodo de Actividad</h2>
+      <form id="period-form">
+        <div class="period">
+          <label for="company-name">Nombre de la Empresa:</label>
+          <input type="text" id="company-name" name="company-name" required>
+        </div>
+        <div class="period">
+          <label for="period-duration">Duración del Periodo (meses):</label>
+          <input type="number" id="period-duration" name="period-duration" min="1" required>
+        </div>
+        <button type="submit">Guardar Cambios</button>
+      </form>
+    </section>
+    <script>     
+      function cerrarSesion() {
+       // Lógica para cerrar sesión y redirigir al menú principal
+       alert('Sesión cerrada. Redirigiendo al menú principal...');
+       // Redirigir al menú principal (cambia la URL al menú principal)
+       window.location.href = 'index.html';  // Cambia 'index.html' por la URL de tu menú principal
+   }</script>
+  </main>
+</body>
+</html>

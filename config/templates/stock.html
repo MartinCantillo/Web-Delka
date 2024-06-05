@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stock-styles.css">
+    <title>Stock</title>
+</head>
+
+<body>
+    <header>
+        <h1>Módulo de Stock</h1>
+        <nav>
+            <ul>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="parametrizacion.html">Parametrización</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+                <li><a href="cotizacion.html">Cotización</a></li>
+                <li><a href="compras.html">Compras</a></li>
+                <li><a href="stock.html">Stock</a></li>
+                <li><a href="informes.html">Informes</a></li>
+                <li><button onclick="cerrarSesion()">Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="stock-section">
+            <h2>Gestión de Stock</h2>
+
+            <!-- Lista de productos con su estado de inventario -->
+            <ul class="stock-list">
+                <!-- Ejemplo de producto en estado óptimo -->
+                <li class="stock-item stock-optimo">
+                    <span>MANGO - Código: 1234</span>
+                    <span>Cantidad: 100</span>
+                </li>
+
+                <!-- Ejemplo de producto en estado de stock mínimo -->
+                <li class="stock-item stock-minimo">
+                    <span>CIRUELA - Código: 5678</span>
+                    <span>Cantidad: 50</span>
+                </li>
+
+                <!-- Ejemplo de producto sin existencia -->
+                <li class="stock-item stock-sin-existencia">
+                    <span>MAMON - Código: 9101</span>
+                    <span>Cantidad: 0</span>
+                </li>
+            </ul>
+        </section>
+        <script>     
+            function cerrarSesion() {
+             // Lógica para cerrar sesión y redirigir al menú principal
+             alert('Sesión cerrada. Redirigiendo al menú principal...');
+             // Redirigir al menú principal (cambia la URL al menú principal)
+             window.location.href = 'index.html';  // Cambia 'index.html' por la URL de tu menú principal
+         }</script>
+    </main>
+</body>
+
+</html>
