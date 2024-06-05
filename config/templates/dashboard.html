@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal del Administrador</title>
+  <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+  <header>
+    <h1>Portal del Administrador</h1>
+    <nav>
+      <ul>
+        <li><a href="#create-company">Crear Empresa</a></li>
+        <li><a href="#manage-modules">Gestionar Módulos</a></li>
+        <li><a href="#manage-periods">Gestionar Periodos</a></li>
+        <li><a href="#manage-databases">Gestionar Bases de Datos</a></li>
+        <li><button onclick="cerrarSesion()">Cerrar sesión</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="create-company">
+      <h2>Crear Empresa</h2>
+      <form>
+        <label for="company-name">Nombre de la Empresa:</label>
+        <input type="text" id="company-name" name="company-name" required>
+        <label for="modules">Módulos Disponibles:</label>
+        <select id="modules" name="modules" multiple>
+          <option value="sales">Ventas</option>
+          <option value="inventory">Inventario</option>
+          <option value="finance">Finanzas</option>
+          <!-- Otros módulos disponibles -->
+        </select>
+        <button type="submit">Crear</button>
+      </form>
+      <script>     
+        function cerrarSesion() {
+         // Lógica para cerrar sesión y redirigir al menú principal
+         alert('Sesión cerrada. Redirigiendo al menú principal...');
+         // Redirigir al menú principal (cambia la URL al menú principal)
+         window.location.href = 'index.html';  // Cambia 'index.html' por la URL de tu menú principal
+     }</script>
+  </main>
+  <footer>
+    <p>&copy; 2024 Portal del Administrador</p>
+  </footer>
+  
+</body>
+</html>
+
