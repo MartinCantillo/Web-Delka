@@ -1,5 +1,3 @@
-
-
 from flask import Flask
 from config.bd import app
 from flask_cors import CORS
@@ -9,3 +7,6 @@ def index():
 
 #Enable CORS for the entire application
 CORS(app)
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
