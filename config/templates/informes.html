@@ -22,7 +22,7 @@
                 <li><a href="compras.html">Compras</a></li>
                 <li><a href="stock.html">Stock</a></li>
                 <li><a href="informes.html">Informes</a></li>
-                <li><button onclick="cerrarSesion()">Cerrar sesión</button></li>
+                <li><button id="cerrar-sesion-btn">Cerrar sesión</button></li>
             </ul>
         </nav>
     </header>
@@ -33,9 +33,9 @@
 
             <!-- Opciones para generar informes -->
             <div class="informes-opciones">
-                <button onclick="generarInforme('ventas')">Informe de Ventas</button>
-                <button onclick="generarInforme('facturas')">Generar Factura</button>
-                <button onclick="generarInforme('clientes')">Informe de Clientes</button>
+                <button id="ventas-btn">Informe de Ventas</button>
+                <button id="facturas-btn">Generar Factura</button>
+                <button id="clientes-btn">Informe de Clientes</button>
             </div>
 
             <!-- Área para mostrar informes generados -->
@@ -48,22 +48,7 @@
         </section>
     </main>
 
-    <script>
-        function generarInforme(tipo) {
-            // Lógica para generar el informe de acuerdo al tipo seleccionado
-            // Esta función puede realizar solicitudes a un servidor para obtener los datos necesarios
-            const resultadoInforme = document.getElementById('resultado-informe');
-            resultadoInforme.innerHTML = `Generando informe de ${tipo}...`;
-
-            // Aquí se puede agregar lógica adicional para generar informes y mostrar los resultados
-        }
-        function cerrarSesion() {
-            // Lógica para cerrar sesión y redirigir al menú principal
-            alert('Sesión cerrada. Redirigiendo al menú principal...');
-            // Redirigir al menú principal (cambia la URL al menú principal)
-            window.location.href = 'index.html';  // Cambia 'index.html' por la URL de tu menú principal
-        }
-    </script>
+    <script src="informes-scripts.js" defer></script>
 </body>
 
 </html>
