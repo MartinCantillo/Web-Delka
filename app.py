@@ -1,9 +1,9 @@
-from flask import Flask
+from flask import Flask, render_template
 from config.bd import app
 from flask_cors import CORS
-@app.route("/")
+@app.route("/", methods=['GET'])
 def index():
-    return "Welcome to the backend by Martin Cantillo "
+    return render_template('index.html')
 
 #Enable CORS for the entire application
 CORS(app)
