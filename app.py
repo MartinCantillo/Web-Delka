@@ -7,6 +7,7 @@ app.register_blueprint(ruta_render, url_prefix="/")
 
 
 
+
 #Enable CORS for the entire application
 CORS(app)
 
