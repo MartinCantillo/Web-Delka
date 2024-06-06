@@ -14,6 +14,6 @@ class Vendedor(bd.Model):
 with app.app_context():
     bd.create_all()
 
-class ProductoSchema(ma.Schema):
+class VendedorSchema(ma.Schema):
     class Meta:
         fields=("id","nombre","apellido")
