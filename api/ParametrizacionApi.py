@@ -25,4 +25,4 @@ def eliminarParametrizacion():
             return jsonify({"mensaje": "No se encontró la parametrización"})
       bd.session.delete(parametrizacion)
       bd.session.commit()
-      return jsonify({"message": "Empresa parametrización"}), 200
+      return jsonify({"message": "Empresa parametrización eliminado"}), 200

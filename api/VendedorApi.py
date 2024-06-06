@@ -26,4 +26,4 @@ def eliminarVendedor():
             return jsonify({"mensaje": "No se encontró el vendedor"})
       bd.session.delete(vendedor)
       bd.session.commit()
-      return jsonify({"message": "Vendedor parametrización"}), 200
+      return jsonify({"message": "Vendedor parametrización eliminado"}), 200

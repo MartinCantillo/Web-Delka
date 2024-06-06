@@ -30,4 +30,4 @@ def eliminarProducto():
             return jsonify({"mensaje": "No se encontró el producto"})
       bd.session.delete(producto)
       bd.session.commit()
-      return jsonify({"message": "Producto parametrización"}), 200
+      return jsonify({"message": "Producto parametrización eliminado"}), 200
