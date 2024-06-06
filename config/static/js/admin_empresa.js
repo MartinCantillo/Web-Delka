@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Lógica para cerrar sesión y redirigir al menú principal
           alert('Sesión cerrada. Redirigiendo al menú principal...');
           // Redirigir al menú principal (cambia la URL al menú principal)
-          window.location.href = '/';  // Cambia 'index.html' por la URL de tu menú principal
+          window.location.href = '/';  
         } else {
           // Si el usuario cancela, no se realiza ninguna acción
           return;

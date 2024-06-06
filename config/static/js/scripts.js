@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             errorMessage.style.display = 'none';
             window.location.href = '/menu_principal';
-            alert(`Bienvenido, ${username} (${role})`);
+            alert(`Bienvenido, ${username}`);
         }
     });
 });
