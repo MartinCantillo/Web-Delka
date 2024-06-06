@@ -12,7 +12,9 @@ def saveEmpresa():
     nombre_empresa=request.json['nombre_empresa']
     descripcion_empresa=request.json['descripcion_empresa']
     periodo_activo=request.json['periodo_activo']
-    nueva_empresa=Empresa(nombre_empresa,descripcion_empresa,periodo_activo)
+    usuario=request.json['usuario']
+    contrasena=request.json['contrasena']
+    nueva_empresa=Empresa(nombre_empresa,descripcion_empresa,periodo_activo,usuario,contrasena)
     bd.session.add(nueva_empresa)
     bd.session.commit()
     return empresa_schema.jsonify(nueva_empresa)
@@ -28,6 +30,21 @@ def eliminarEmpresa():
      return jsonify({"message": "Empresa eliminada"}), 200
           
 
+@ruta_empresa.route("/login", methods=['POST'])
+def login():
+    usuario = request.json['usuario']
+    contrasena = request.json['contrasena']
+
+    if not usuario or not contrasena:
+        return jsonify({"message": "Username and password are required"}), 400
+
+    empresa = Empresa.query.filter_by(usuario=usuario).first()
+
+    if not empresa:
+        return jsonify({"message": "Invalid username or password"}), 401
 
 
+    if empresa.contrasena != contrasena:
+        return jsonify({"message": "Invalid  password"}), 401
 
+    return jsonify({"empresa_id": empresa.id,"empresa":empresa.nombre_empresa}), 200

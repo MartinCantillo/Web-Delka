@@ -6,11 +6,15 @@ class Empresa(bd.Model):
     nombre_empresa = bd.Column(bd.String(100), nullable=False)
     descripcion_empresa = bd.Column(bd.String(200), nullable=False)
     periodo_activo =bd.Column(bd.String(200), nullable=False)
+    usuario = bd.Column(bd.String(200), nullable=False)
+    contrasena = bd.Column(bd.String(200), nullable=False)
     
-    def __init__(self,nombre_empresa,descripcion_empresa,periodo_activo):
+    def __init__(self,nombre_empresa,descripcion_empresa,periodo_activo,usuario,contrasena):
         self.nombre_empresa = nombre_empresa
         self.descripcion_empresa = descripcion_empresa
         self.periodo_activo=periodo_activo
+        self.usuario=usuario
+        self.contrasena=contrasena
        
         
 with app.app_context():
@@ -18,4 +22,4 @@ with app.app_context():
 
 class AdministradorSchema(ma.Schema):
     class Meta:
-        fields=("id","nombre_empresa","descripcion_empresa","periodo_activo")
+        fields=("id","nombre_empresa","descripcion_empresa","periodo_activo","usuario","contrasena")
