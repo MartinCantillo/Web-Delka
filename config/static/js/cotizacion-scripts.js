@@ -29,5 +29,5 @@ function cerrarSesion() {
     // Lógica para cerrar sesión y redirigir al menú principal
     alert('Sesión cerrada. Redirigiendo al menú principal...');
     // Redirigir al menú principal (cambia la URL al menú principal)
-    window.location.href = '../index.html';  // 
+    window.location.href = '/';  // 
 }

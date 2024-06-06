@@ -25,6 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
         alert('Sesión cerrada. Redirigiendo al menú principal...');
 
         // Redirige al menú principal (cambia la URL al menú principal)
-        window.location.href = 'index.html';  // Cambia 'index.html' por la URL de tu menú principal
+        window.location.href = '/';  
     }
 });
