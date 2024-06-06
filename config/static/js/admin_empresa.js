@@ -1,65 +1,45 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('agregar-empresa-form');
-    const empresaList = document.getElementById('empresa-list');
+document.addEventListener('DOMContentLoaded', function() {
+    const empresasSection = document.querySelector('.empresa-section');
 
-    // Cargar empresas al iniciar la página
-    cargarEmpresas();
+    function obtenerYMostrarEmpresas() {
+        axios.get('/api/getEmpresas')
+            .then(response => {
+                const empresas = response.data;
+                mostrarEmpresas(empresas);
+            })
+            .catch(error => {
+                console.error('Error al obtener las empresas:', error);
+                alert('Hubo un error al obtener las empresas.');
+            });
+    }
 
-    // Manejar el evento de envío del formulario
-    form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Evita el envío tradicional del formulario
-        agregarEmpresa();
+    function mostrarEmpresas(empresas) {
+        empresasSection.innerHTML = ''; // Limpiar el contenido existente
+
+        empresas.forEach(empresa => {
+            const empresaDiv = document.createElement('div');
+            empresaDiv.classList.add('empresa');
+
+            const nombreEmpresa = document.createElement('h3');
+            nombreEmpresa.textContent = empresa.nombre_empresa;
+            empresaDiv.appendChild(nombreEmpresa);
+
+            const descripcionEmpresa = document.createElement('p');
+            descripcionEmpresa.textContent = empresa.descripcion_empresa;
+            empresaDiv.appendChild(descripcionEmpresa);
+
+            empresasSection.appendChild(empresaDiv);
+        });
+    }
+
+    obtenerYMostrarEmpresas();
+
+    document.getElementById('cerrar-sesion-btn').addEventListener('click', function() {
+        cerrarSesion();
     });
 
-    // Función para cargar la lista de empresas
-    async function cargarEmpresas() {
-        try {
-            const response = await axios.get('/api/getEmpresas');
-            const empresas = response.data;
-            empresaList.innerHTML = '';
-            empresas.forEach(empresa => {
-                const listItem = document.createElement('li');
-                listItem.textContent = `${empresa.nombre} - ${empresa.descripcion} - ${empresa.periodo_activo}`;
-                const deleteButton = document.createElement('button');
-                deleteButton.textContent = 'Eliminar';
-                deleteButton.addEventListener('click', () => eliminarEmpresa(empresa.id));
-                listItem.appendChild(deleteButton);
-                empresaList.appendChild(listItem);
-            });
-        } catch (error) {
-            console.error('Error al cargar las empresas:', error);
-        }
-    }
-
-    // Función para agregar una nueva empresa
-    async function agregarEmpresa() {
-        const nombre = document.getElementById('empresa-nombre').value;
-        const descripcion = document.getElementById('Descripcion').value;
-        const periodoActivo = document.getElementById('Periodo Activo').value;
-        const usuario = document.getElementById('usuario').value;
-        const contraseña = document.getElementById('Contraseña').value;
-
-        try {
-            const response = await axios.post('/api/guardarEmpresa', {
-                'nombre_empresa': nombre,
-                'descripcion_empresa': descripcion,
-                'periodo_activo': periodoActivo,
-                'usuario': usuario,
-                'contrasena': contraseña
-            });
-            alert('Empresa agregada exitosamente');
-            form.reset();
-            cargarEmpresas();
-        } catch (error) {
-            console.error('Error al agregar la empresa:', error);
-        }
-    }
-
-
-    // Manejar el cierre de sesión
-    document.getElementById('cerrar-sesion').addEventListener('click', () => {
-        // Lógica para cerrar sesión y redirigir al menú principal
+    function cerrarSesion() {
         alert('Sesión cerrada. Redirigiendo al menú principal...');
         window.location.href = '/';
-    });
+    }
 });
