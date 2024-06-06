@@ -15,6 +15,7 @@ def saveEmpresa():
     nueva_empresa=Empresa(nombre_empresa,descripcion_empresa,periodo_activo)
     bd.session.add(nueva_empresa)
     bd.session.commit()
+    return empresa_schema.jsonify(nueva_empresa)
 
 @ruta_empresa.route("/eliminarEmpresa", methods=['DELETE'])
 def eliminarEmpresa():

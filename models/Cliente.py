@@ -22,6 +22,6 @@ class Cliente(bd.Model):
 with app.app_context():
     bd.create_all()
 
-class AdministradorSchema(ma.Schema):
+class ClienteSchema(ma.Schema):
     class Meta:
         fields=("id","nombre","identificacion","direccion","telefono","correo")
