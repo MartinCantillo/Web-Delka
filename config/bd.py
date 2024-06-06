@@ -15,3 +15,4 @@ app.secret_key = "Movil2"
 
 bd = SQLAlchemy(app)
 ma = Marshmallow(app)
+
