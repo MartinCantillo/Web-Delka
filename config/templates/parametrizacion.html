@@ -1,51 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parametrización - Portal de Empresa</title>
-  <link rel="stylesheet" href="parametrizacion-styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametrización - Portal de Empresa</title>
+    <link rel="stylesheet" href="parametrizacion-styles.css">
 </head>
 <body>
-  <header>
-    <h1>Parametrización</h1>
-  </header>
-  <nav>
-    <ul>
-        <li><a href="perfil.html">Perfil</a></li>
-        <li><a href="parametrizacion.html">Parametrización</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="clientes.html">Clientes</a></li>
-        <li><a href="cotizacion.html">Cotización</a></li>
-        <li><a href="compras.html">Compras</a></li>
-        <li><a href="stock.html">Stock</a></li>
-        <li><a href="informes.html">Informes</a></li>
-        <li><button onclick="cerrarSesion()">Cerrar sesión</button></li>
-    </ul>
-</nav>
-  <main>
-    <section>
-      <h2>Configuración de Parámetros</h2>
-      <form id="parametros-form">
-        <div>
-          <label for="ganancia">Porcentaje de Ganancia:</label>
-          <input type="number" id="ganancia" name="ganancia" min="0" max="100">
-        </div>
-        <div>
-          <label for="iva">Porcentaje de IVA:</label>
-          <input type="number" id="iva" name="iva" min="0" max="100">
-        </div>
-        <!-- Otros campos de configuración de parámetros -->
-        <button type="submit">Guardar</button>
-      </form>
-    </section>
-    <script>     
-      function cerrarSesion() {
-       // Lógica para cerrar sesión y redirigir al menú principal
-       alert('Sesión cerrada. Redirigiendo al menú principal...');
-       // Redirigir al menú principal (cambia la URL al menú principal)
-       window.location.href = 'index.html';  // Cambia 'index.html' por la URL de tu menú principal
-   }</script>
-  </main>
+    <header>
+        <h1>Parametrización</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="templates/perfil.html">Perfil</a></li>
+            <li><a href="templates/parametrizacion.html">Parametrización</a></li>
+            <li><a href="templates/productos.html">Productos</a></li>
+            <li><a href="templates/clientes.html">Clientes</a></li>
+            <li><a href="templates/cotizacion.html">Cotización</a></li>
+            <li><a href="templates/compras.html">Compras</a></li>
+            <li><a href="templates/stock.html">Stock</a></li>
+            <li><a href="templates/informes.html">Informes</a></li>
+            <li><button onclick="cerrarSesion()">Cerrar sesión</button></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Configuración de Parámetros</h2>
+            <form id="parametros-form">
+                <div>
+                    <label for="ganancia">Porcentaje de Ganancia:</label>
+                    <input type="number" id="ganancia" name="ganancia" min="0" max="100">
+                </div>
+                <div>
+                    <label for="iva">Porcentaje de IVA:</label>
+                    <input type="number" id="iva" name="iva" min="0" max="100">
+                </div>
+                <!-- Otros campos de configuración de parámetros -->
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+    </main>
+    <script src="parametrizacion-script.js"></script>
 </body>
 </html>

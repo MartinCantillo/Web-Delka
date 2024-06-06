@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestionar Periodos</title>
-  <link rel="stylesheet" href="period-management-styles.css">
+  <link rel="stylesheet" href="static/css/period-management-styles.css">
 </head>
 <body>
   <header>
     <h1>Gestionar Periodos - Administrador</h1>
     <nav>
       <ul>
-          <li><a href="menu_principal.html">Menú principal</a></li>
-          <li><a href="gestion_empresas.html">Gestión de Empresas</a></li>
-          <li><a href="periodo-managment.html">Gestión de Periodos</a></li>
-          <li><a href="databasemanagment.html">Gestión de Bases de Datos</a></li>
-          <li><a href="cerrar_sesion.html">Cerrar Sesión</a></li>
+          <li><a href="templates/menu_principal.html">Menú principal</a></li>
+          <li><a href="templates/gestion_empresas.html">Gestión de Empresas</a></li>
+          <li><a href="templates/periodo-managment.html">Gestión de Periodos</a></li>
+          <li><a href="templates/databasemanagment.html">Gestión de Bases de Datos</a></li>
+          <li><a href="templates/cerrar_sesion.html">Cerrar Sesión</a></li>
       </ul>
   </nav>
   </header>
@@ -34,13 +34,7 @@
         <button type="submit">Guardar Cambios</button>
       </form>
     </section>
-    <script>     
-      function cerrarSesion() {
-       // Lógica para cerrar sesión y redirigir al menú principal
-       alert('Sesión cerrada. Redirigiendo al menú principal...');
-       // Redirigir al menú principal (cambia la URL al menú principal)
-       window.location.href = 'index.html';  // Cambia 'index.html' por la URL de tu menú principal
-   }</script>
   </main>
+  <script src="static/js/period-management-script.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil - Portal de Empresa</title>
-  <link rel="stylesheet" href="perfil-styles.css">
+  <link rel="stylesheet" href="static/css/perfil-styles.css">
 </head>
 <body>
   <header>
@@ -13,15 +13,15 @@
   </header>
   <nav>
     <ul>
-      <li><a href="perfil.html">Perfil</a></li>
-      <li><a href="parametrizacion.html">Parametrización</a></li>
-      <li><a href="productos.html">Productos</a></li>
-      <li><a href="clientes.html">Clientes</a></li>
-      <li><a href="cotizacion.html">Cotización</a></li>
-      <li><a href="compras.html">Compras</a></li>
-      <li><a href="stock.html">Stock</a></li>
-      <li><a href="informes.html">Informes</a></li>
-      <li><button onclick="cerrarSesion()">Cerrar sesión</button></li>
+      <li><a href="templates/perfil.html">Perfil</a></li>
+      <li><a href="templates/parametrizacion.html">Parametrización</a></li>
+      <li><a href="templates/productos.html">Productos</a></li>
+      <li><a href="templates/clientes.html">Clientes</a></li>
+      <li><a href="templates/cotizacion.html">Cotización</a></li>
+      <li><a href="templates/compras.html">Compras</a></li>
+      <li><a href="templates/stock.html">Stock</a></li>
+      <li><a href="templates/informes.html">Informes</a></li>
+      <li><button id="cerrarSesionBtn">Cerrar sesión</button></li>
     </ul>
   </nav>
   <main>
@@ -45,13 +45,7 @@
       </div>
       <!-- Otros campos del perfil -->
     </section>
-    <script>     
-      function cerrarSesion() {
-       // Lógica para cerrar sesión y redirigir al menú principal
-       alert('Sesión cerrada. Redirigiendo al menú principal...');
-       // Redirigir al menú principal (cambia la URL al menú principal)
-       window.location.href = 'index.html';  // Cambia 'index.html' por la URL de tu menú principal
-   }</script>
   </main>
+  <script src="perfil-script.js"></script>
 </body>
 </html>
