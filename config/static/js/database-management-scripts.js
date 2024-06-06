@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Función para cerrar sesión
     function cerrarSesion() {
       alert('Sesión cerrada. Redirigiendo al menú principal...');
-      window.location.href = 'index.html';  // Cambia 'index.html' por la URL de tu menú principal
+      window.location.href = '/';  // Cambia 'index.html' por la URL de tu menú principal
     }
   
     // Función para manejar la creación de bases de datos
