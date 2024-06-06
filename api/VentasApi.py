@@ -6,7 +6,7 @@ from config.bd import app, bd, ma
 ruta_ventas = Blueprint("ruta_ventas", __name__)
 
 venta_schema = VentaProductoSchema()
-ventas_schema = VentaProductoSchema()
+ventas_schema = VentaProductoSchema(many=True)
 
 
 @ruta_ventas.route("/guardarVentas",  methods=['POST'])

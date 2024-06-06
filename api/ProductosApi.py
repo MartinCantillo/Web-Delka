@@ -6,7 +6,7 @@ from config.bd import app, bd, ma
 ruta_productos = Blueprint("ruta_productos", __name__)
 
 producto_schema = ProductoSchema()
-productos_schema = ProductoSchema()
+productos_schema = ProductoSchema(many=True)
 
 @ruta_productos.route("/guardarProducto",  methods=['POST'])
 def saveProducto():

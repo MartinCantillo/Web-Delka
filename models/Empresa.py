@@ -20,6 +20,6 @@ class Empresa(bd.Model):
 with app.app_context():
     bd.create_all()
 
-class AdministradorSchema(ma.Schema):
+class EmpresaSchema(ma.Schema):
     class Meta:
         fields=("id","nombre_empresa","descripcion_empresa","periodo_activo","usuario","contrasena")
