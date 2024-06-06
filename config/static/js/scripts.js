@@ -10,41 +10,43 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
         const role = document.getElementById('role').value;
 
-        if (username === '' || password === '' || role=='') {
-           
+        if (username === '' || password === '' || role == '') {
+
             errorMessage.textContent = 'Todos los campos son obligatorios.';
             errorMessage.style.display = 'block';
             alert(`Por favor revisa`);
             return;
-        } else if (username == 'admin' || password == 'admin123' && role=='Administrador') {
+        } else if (username == 'admin' || password == 'admin123' && role == 'Administrador') {
             alert(`Bienvenido`);
             console.log("adminsitrador");
             window.location.href = '/menu_principal';
         }
-        else if(username !== 'admin' || password !== 'admin123' && role=='Administrador'){
-            alert(`Ingrese bien los datos`);
+        else if (username !== 'admin' && password !== 'admin123' && role == 'admin') {
+            console.log(role)
+            alert(role);
         }
-        else{   
-        axios.post('/login', {
-            usuario: username,
-            contrasena: password
-        })
-            .then(response => {
-                // Si la respuesta es exitosa, redirigir al usuario
-                const data = response.data;
-                errorMessage.style.display = 'none';
-                alert(`Bienvenido`);
-                window.location.href = '/menu_principal';
+        else if (username !== 'admin' || password !== 'admin123' && role == 'empresa') {
+            axios.post('/login', {
+                usuario: username,
+                contrasena: password
             })
-            .catch(error => {
-              
-                if (error.response) {
-                    alert("El usuario no se encuentra registrado en la bd");;
-                } else {
-                    
-                    alert(`Error al conectar con el servidor.`);
-                }
-                errorMessage.style.display = 'block';
-            });
-        }});
+                .then(response => {
+                    // Si la respuesta es exitosa, redirigir al usuario
+                    const data = response.data;
+                    errorMessage.style.display = 'none';
+                    alert(`Bienvenido`);
+                    window.location.href = '/menu_principal';
+                })
+                .catch(error => {
+
+                    if (error.response) {
+                        alert("El usuario no se encuentra registrado en la bd");;
+                    } else {
+
+                        alert(`Error al conectar con el servidor.`);
+                    }
+                    errorMessage.style.display = 'block';
+                });
+        }
+    });
 });
