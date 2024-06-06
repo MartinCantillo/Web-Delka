@@ -1,7 +1,7 @@
 // Función para cerrar sesión
 function cerrarSesion() {
     alert('Sesión cerrada. Redirigiendo al menú principal...');
-    window.location.href = 'index.html'; // Cambia 'index.html' por la URL de tu menú principal
+    window.location.href = '/'; 
 }
 
 document.addEventListener('DOMContentLoaded', function() {

@@ -13,7 +13,7 @@ function redirigirAlMenuPrincipal() {
     alert('Sesión cerrada. Redirigiendo al menú principal...');
 
     // Redirigir al menú principal (cambiar la URL según sea necesario)
-    window.location.href = 'index.html';
+    window.location.href = '/';
 }
 
 // Asociar la función cerrarSesion al evento click del botón

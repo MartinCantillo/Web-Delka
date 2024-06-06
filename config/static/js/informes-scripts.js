@@ -45,6 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function cerrarSesion() {
         alert('Sesión cerrada. Redirigiendo al menú principal...');
-        window.location.href = 'index.html';
+        window.location.href = '/';
     }
 });
