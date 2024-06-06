@@ -29,16 +29,16 @@ document.addEventListener('DOMContentLoaded', () => {
             alert(role);
         }
         else if (username !== 'admin' || password !== 'admin123' && role == 'empresa') {
-            axios.post('/login', {
+            axios.post('/api/login', {
                 usuario: username,
                 contrasena: password
             })
                 .then(response => {
-                    // Si la respuesta es exitosa, redirigir al usuario
+
                     const data = response.data;
                     errorMessage.style.display = 'none';
                     alert(`Bienvenido`);
-                    window.location.href = '/menu_principal';
+                    window.location.href = '/admin-empresa';
                 })
                 .catch(error => {
 
