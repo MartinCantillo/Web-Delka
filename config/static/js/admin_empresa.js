@@ -55,16 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Función para eliminar una empresa
-    async function eliminarEmpresa(id) {
-        try {
-            await axios.delete(`/api/EmpresaApi/${id}`);
-            alert('Empresa eliminada exitosamente');
-            cargarEmpresas();
-        } catch (error) {
-            console.error('Error al eliminar la empresa:', error);
-        }
-    }
 
     // Manejar el cierre de sesión
     document.getElementById('cerrar-sesion').addEventListener('click', () => {
