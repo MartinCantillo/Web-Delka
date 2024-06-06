@@ -25,7 +25,9 @@
       <form id="period-form">
         <div class="period">
           <label for="company-name">Nombre de la Empresa:</label>
-          <input type="text" id="company-name" name="company-name" required>
+          <select id="company-name" name="company-name" required>
+            <option value="">Seleccione una empresa</option>
+          </select>
         </div>
         <div class="period">
           <label for="period-duration">Duración del Periodo (meses):</label>
@@ -35,7 +37,7 @@
       </form>
     </section>
   </main>
-  <script src="period-management-script.js"></script>
+  <script src="static/js/period-management-script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
