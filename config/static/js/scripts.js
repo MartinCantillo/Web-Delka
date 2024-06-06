@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 contrasena: password
             })
                 .then(response => {
-                   
+
                     const data = response.data;
                     errorMessage.style.display = 'none';
                     alert(`Bienvenido`);
-                    window.location.href = '/menu_principal';
+                    window.location.href = '/admin-empresa';
                 })
                 .catch(error => {
 
