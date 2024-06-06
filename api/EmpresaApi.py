@@ -48,3 +48,11 @@ def login():
         return jsonify({"message": "Invalid  password"}), 401
 
     return jsonify({"empresa_id": empresa.id,"empresa":empresa.nombre_empresa}), 200
+
+
+
+@ruta_empresa.route('/getEmpresas', methods=['GET'])
+def get_empresas():
+    empresas = Empresa.query.all()
+    result = empresas_schema.dump(empresas)
+    return jsonify(result)
