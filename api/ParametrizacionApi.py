@@ -5,7 +5,7 @@ from config.bd import app, bd, ma
 ruta_parametrizacion = Blueprint("ruta_parametrizacion", __name__)
 
 parametrizacion_schema = ParametrizacionSchema()
-parametrizacions_schema = ParametrizacionSchema()
+parametrizacions_schema = ParametrizacionSchema(many=True)
 
 @ruta_parametrizacion.route("/guardarParametrizacion",  methods=['POST'])
 def saveParametrizacion():

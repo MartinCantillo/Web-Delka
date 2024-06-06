@@ -6,7 +6,7 @@ from config.bd import app, bd, ma
 ruta_cliente = Blueprint("ruta_cliente", __name__)
 
 cliente_schema = ClienteSchema()
-clientes_schema = ClienteSchema()
+clientes_schema = ClienteSchema(many=True)
 
 
 @ruta_cliente.route("/guardarCliente",  methods=['POST'])

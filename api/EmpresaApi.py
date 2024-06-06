@@ -1,11 +1,11 @@
 from flask import Flask, Blueprint, request, jsonify,render_template
-from models.Empresa import Empresa,AdministradorSchema
+from models.Empresa import Empresa,EmpresaSchema
 from config.bd import app, bd, ma
 
 ruta_empresa = Blueprint("ruta_empresa", __name__)
 
-empresa_schema = AdministradorSchema()
-empresas_schema = AdministradorSchema()
+empresa_schema = EmpresaSchema()
+empresas_schema = EmpresaSchema(many=True)
 
 @ruta_empresa.route("/guardarEmpresa",  methods=['POST'])
 def saveEmpresa():
@@ -54,5 +54,6 @@ def login():
 @ruta_empresa.route('/getEmpresas', methods=['GET'])
 def get_empresas():
     empresas = Empresa.query.all()
+    print(empresas)
     result = empresas_schema.dump(empresas)
     return jsonify(result)
