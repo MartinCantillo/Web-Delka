@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const companyId = companySelect.value;
       const databaseName = document.getElementById('database-name').value;
 
-      axios.post('/api/createDatabase', {
-          company_id: companyId,
-          database_name: databaseName
+      axios.post('/api/Empresas', {
+          company_id: id,
+          database_name: bdtest
       })
       .then(response => {
           alert('Base de datos creada exitosamente.');
@@ -44,16 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Cargar la lista de bases de datos existentes
   function loadDatabases() {
-      axios.get('/api/getEmpresas')
-          .then(response => {
-              const databases = response.data;
-              databaseList.innerHTML = '';
-              databases.forEach(db => {
-                  const listItem = document.createElement('li');
-                  listItem.textContent = `${db.nombre_empresa} (Empresa ID: ${db.id})`;
-  
-                  databaseList.appendChild(listItem);
-              });
+    axios.get('/api/getEmpresas')
+    .then(response => {
+        const empresas = response.data;
           })
           .catch(error => {
               console.error('Error al cargar las bases de datos:', error);
