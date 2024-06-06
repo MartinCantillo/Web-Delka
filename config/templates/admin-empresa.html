@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Empresas - Portal de Empresa</title>
+    <link rel="stylesheet" href="static/css/admin_empresa_styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Administrar Empresas</h1>
+        <nav>
+            <ul>
+                <li><a href="templates/perfil.html">Perfil</a></li>
+                <li><a href="templates/parametrizacion.html">Parametrización</a></li>
+                <li><a href="templates/productos.html">Productos</a></li>
+                <li><a href="templates/clientes.html">Clientes</a></li>
+                <li><a href="templates/cotizacion.html">Cotización</a></li>
+                <li><a href="templates/compras.html">Compras</a></li>
+                <li><a href="templates/stock.html">Stock</a></li>
+                <li><a href="templates/informes.html">Informes</a></li>
+                <li><button id="cerrar-sesion">Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="empresa-section">
+            <h2>Agregar Nueva Empresa</h2>
+            <form id="agregar-empresa-form">
+                <div class="form-group">
+                    <label for="empresa-nombre">Nombre de la Empresa:</label>
+                    <input type="text" id="empresa-nombre" name="empresa-nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="empresa-nit">NIT:</label>
+                    <input type="text" id="empresa-nit" name="empresa-nit" required>
+                </div>
+                <div class="form-group">
+                    <label for="empresa-direccion">Dirección:</label>
+                    <input type="text" id="empresa-direccion" name="empresa-direccion" required>
+                </div>
+                <div class="form-group">
+                    <label for="empresa-telefono">Teléfono:</label>
+                    <input type="text" id="empresa-telefono" name="empresa-telefono" required>
+                </div>
+                <button type="submit">Agregar Empresa</button>
+            </form>
+        </section>
+
+        <section class="empresa-list-section">
+            <h2>Lista de Empresas</h2>
+            <ul id="empresa-list" class="empresa-list">
+                <!-- Lista de empresas se generará aquí dinámicamente -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="static/js/admin_empresa.js"></script>
+</body>
+
+</html>

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             errorMessage.style.display = 'block';
         } else {
             errorMessage.style.display = 'none';
-            // Redirigir o hacer alguna otra acción al iniciar sesión correctamente
+            window.location.href = '/menu_principal';
             alert(`Bienvenido, ${username} (${role})`);
         }
     });
