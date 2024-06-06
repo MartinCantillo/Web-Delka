@@ -4,8 +4,8 @@ class Ventas(bd.Model):
     __tablename__ = 'tblVentas'
     id = bd.Column(bd.Integer, primary_key=True)
     descripcion = bd.Column(bd.String(200), nullable=False)
-    id_cliente = bd.Column(bd.Integer, bd.ForeignKey('tblClientes.id'))
-    id_ventaProducto= bd.Column(bd.Integer, bd.ForeignKey('tblClientes.id'))
+    id_cliente = bd.Column(bd.Integer, bd.ForeignKey('tblCliente.id'))
+    id_ventaProducto= bd.Column(bd.Integer, bd.ForeignKey('tblVentaProducto.id'))
     fecha_registro = bd.Column(bd.String(200))
     habilitado=bd.Column(bd.String(200))
 

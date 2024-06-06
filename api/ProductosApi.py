@@ -1,5 +1,5 @@
 from flask import Flask, Blueprint, request, jsonify,render_template
-from models.Parametrizacion import Producto,ProductoSchema
+from models.Productos import Producto,ProductoSchema
 from config.bd import app, bd, ma
 
 
