@@ -40,12 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const contraseña = document.getElementById('Contraseña').value;
 
         try {
-            const response = await axios.post('/api/EmpresaApi', {
-                nombre,
-                descripcion,
-                periodo_activo: periodoActivo,
-                usuario,
-                contraseña
+            const response = await axios.post('/api/guardarEmpresa', {
+                'nombre_empresa': nombre,
+                'descripcion_empresa': descripcion,
+                'periodo_activo': periodoActivo,
+                'usuario': usuario,
+                'contrasena': contraseña
             });
             alert('Empresa agregada exitosamente');
             form.reset();
