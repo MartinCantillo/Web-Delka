@@ -11,7 +11,7 @@
     <h1>Gestionar Bases de Datos</h1>
     <nav>
       <ul>
-        <li><a href=/menu_principal">Menú principal</a></li>
+        <li><a href="/menu_principal">Menú principal</a></li>
         <li><a href="/gestion_empresas">Gestión de Empresas</a></li>
         <li><a href="/periodo-managment">Gestión de Periodos</a></li>
         <li><a href="/databasemanagment">Gestión de Bases de Datos</a></li>
@@ -22,14 +22,16 @@
   <main>
     <section>
       <h2>Crear Base de Datos</h2>
-      <form id="database-form">
-        <div class="database">
-          <label for="company-id">ID de la Empresa:</label>
-          <input type="text" id="company-id" name="company-id" required>
+      <form id="bdtest">
+        <div class="bdtest">
+          <label for="id">Nombre de la Empresa:</label>
+          <select id="id" name="nombre_empresa" required>
+            <option value="">Seleccione una empresa</option>
+          </select>
         </div>
-        <div class="database">
-          <label for="database-name">Nombre de la Base de Datos:</label>
-          <input type="text" id="database-name" name="database-name" required>
+        <div class="bdtest">
+          <label for="bdtest">Nombre de la Base de Datos:</label>
+          <input type="text" id="bdtest" name="bdtest" required>
         </div>
         <button type="submit">Crear Base de Datos</button>
       </form>
@@ -37,8 +39,7 @@
     
     <section>
       <h2>Gestionar Bases de Datos Existentes</h2>
-      <!-- Lista de bases de datos existentes con opciones para administrar -->
-      <ul id="database-list" class="database-list">
+      <ul id="bdtest-list" class="bdtest-list">
         <!-- Las bases de datos se añadirán dinámicamente aquí -->
       </ul>
     </section>
@@ -47,7 +48,7 @@
     <p>&copy; 2024 Gestionar Bases de Datos</p>
   </footer>
   
-  <script src="static/js/database-management-scripts.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="static/js/database-management-scripts.js"></script>
 </body>
 </html>
